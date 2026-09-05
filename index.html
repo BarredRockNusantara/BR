@@ -1,0 +1,301 @@
+<!-- =====================================================
+     KOMUNITAS FACEBOOK
+===================================================== -->
+
+<section
+id="komunitas"
+class="community reveal">
+
+<div class="container">
+
+<div class="community-box">
+
+<span class="section-tag">
+BARRED ROCK COMMUNITY
+</span>
+
+<h2>
+Bergabung Bersama Komunitas Kami
+</h2>
+
+<p>
+Mari bergabung dengan komunitas pecinta ayam Barred
+Plymouth Rock. Bagikan pengalaman, dokumentasi,
+perkembangan peternakan, koleksi ayam, serta berdiskusi
+bersama sesama penghobi dan peternak.
+</p>
+
+<p>
+Komunitas ini menjadi tempat untuk saling berbagi
+informasi dan mempertemukan para pecinta Barred Plymouth
+Rock dari berbagai daerah.
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="https://facebook.com/"
+target="_blank"
+class="btn btn-primary">
+
+KUNJUNGI FACEBOOK
+
+</a>
+
+<a
+href="#galeri"
+class="btn btn-secondary">
+
+LIHAT KOLEKSI KAMI
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<h3>
+BARRED PLYMOUTH ROCK FARM
+</h3>
+
+<p>
+Dedicated to the beauty, development, documentation,
+and community of Barred Plymouth Rock.
+</p>
+
+<p style="margin-top:15px;">
+
+© 2026 Barred Plymouth Rock Farm
+| All Rights Reserved
+
+</p>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   SCROLL REVEAL ANIMATION
+===================================================== */
+
+const revealElements =
+document.querySelectorAll(
+".reveal"
+);
+
+function revealOnScroll(){
+
+    revealElements.forEach(
+
+        function(element){
+
+            const
+            windowHeight =
+            window.innerHeight;
+
+            const
+            elementTop =
+            element.getBoundingClientRect().top;
+
+            const
+            revealPoint =
+            100;
+
+            if(
+                elementTop
+                <
+                windowHeight
+                -
+                revealPoint
+            ){
+
+                element.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+
+    );
+
+}
+
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
+
+revealOnScroll();
+
+
+/* =====================================================
+   SIMPLE HEADER EFFECT
+===================================================== */
+
+window.addEventListener(
+
+    "scroll",
+
+    function(){
+
+        const
+        header =
+        document.querySelector(
+            "header"
+        );
+
+        if(
+            window.scrollY
+            >
+            50
+        ){
+
+            header.style.boxShadow =
+            "0 10px 35px rgba(0,0,0,.45)";
+
+        }
+
+        else{
+
+            header.style.boxShadow =
+            "0 5px 25px rgba(0,0,0,.35)";
+
+        }
+
+    }
+
+);
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const
+menuToggle =
+document.querySelector(
+    ".menu-toggle"
+);
+
+const
+navMenu =
+document.querySelector(
+    ".nav-menu"
+);
+
+
+menuToggle.addEventListener(
+
+    "click",
+
+    function(){
+
+        if(
+            navMenu.style.display
+            ===
+            "flex"
+        ){
+
+            navMenu.style.display =
+            "none";
+
+        }
+
+        else{
+
+            navMenu.style.display =
+            "flex";
+
+            navMenu.style.position =
+            "absolute";
+
+            navMenu.style.top =
+            "82px";
+
+            navMenu.style.left =
+            "0";
+
+            navMenu.style.width =
+            "100%";
+
+            navMenu.style.padding =
+            "20px";
+
+            navMenu.style.flexDirection =
+            "column";
+
+            navMenu.style.background =
+            "rgba(9,22,15,.98)";
+
+            navMenu.style.borderBottom =
+            "1px solid rgba(214,168,58,.3)";
+
+        }
+
+    }
+
+);
+
+
+/* =====================================================
+   CLOSE MOBILE MENU
+===================================================== */
+
+const
+navLinks =
+document.querySelectorAll(
+    ".nav-menu a"
+);
+
+navLinks.forEach(
+
+    function(link){
+
+        link.addEventListener(
+
+            "click",
+
+            function(){
+
+                if(
+                    window.innerWidth
+                    <=
+                    900
+                ){
+
+                    navMenu.style.display =
+                    "none";
+
+                }
+
+            }
+
+        );
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>
